@@ -12,9 +12,11 @@
 <a href="../board/list">Hello MIT305 Community ★m~!  </a>
 </h1>
 
-<P>
+
 <fieldset>
 <h2>  깃허브 테스트</h2>
+
+<P>이 서버의 현재시간은 ${serverTime }  </P>
  	
  		
  		
@@ -23,6 +25,6 @@
  	
  			
 
- </P>
+
 </body>
 </html>
