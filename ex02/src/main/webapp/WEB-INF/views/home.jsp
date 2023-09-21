@@ -4,6 +4,7 @@
 <%@ page session="false" %>
 <html>
 <head>
+<meta charset="UTP-8">
 	<title>Welcom JY HOME</title>
 </head>
 <body>
@@ -13,9 +14,8 @@
 
 <P>
 <fieldset>
-<h2>  1. 검색기능추가<br/></h2>
- 			<h3>- 작성일 , 수정일</h3>
- 		<h2>2. 게시글 조회수표기 구현</h2>
+<h2>  깃허브 테스트</h2>
+ 	
  		
  		
  		
