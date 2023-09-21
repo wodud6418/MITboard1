@@ -53,6 +53,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand"  href="list" >MIT305 Community ★m~</a>
+                <a class="navbar-brand" >현재 서버의시간은..${serverTime }</a> 
             </div>
             <!-- /.navbar-header -->
 
