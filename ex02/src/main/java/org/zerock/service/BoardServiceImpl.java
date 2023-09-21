@@ -1,5 +1,6 @@
 package org.zerock.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -78,6 +79,12 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void updateHao(int bno) {
 		mapper.updateHao(bno);
+	}
+
+	@Override
+	public Date now() {
+		Date date = new Date();
+		return date;
 	}
 	
 	

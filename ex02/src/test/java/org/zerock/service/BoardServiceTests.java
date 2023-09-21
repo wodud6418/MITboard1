@@ -59,5 +59,10 @@ public class BoardServiceTests {
 		service.updateHao(2424854);
 	}
 	
+	@Test
+	public void testNow() {
+		log.info("현재시간:"+service.now());
+	}
+	
 }
 

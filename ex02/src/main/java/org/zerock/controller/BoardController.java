@@ -29,6 +29,7 @@ public class BoardController {
 		model.addAttribute("pageMaker", new PageDTO(cri, service.count(cri)));  //페이지바 정보
 		model.addAttribute("count", service.count(cri));
 		model.addAttribute("count2", service.count2());
+		model.addAttribute("now", service.now());
 	   
 		
 		// -> board/list.jsp

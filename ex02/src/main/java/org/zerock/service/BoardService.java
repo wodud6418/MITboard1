@@ -1,5 +1,6 @@
 package org.zerock.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.zerock.domain.BoardVO;
@@ -26,6 +27,9 @@ public interface BoardService {
 	void updateHit(int boardNo);
 	//9.좋아요
 	void updateHao(int bno);
+	
+	//현재시간 
+	Date now();
 
 }
 

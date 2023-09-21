@@ -53,11 +53,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand"  href="list" >MIT305 Community ★m~</a>
-                <a class="navbar-brand" >현재 서버의시간은..
-                <%@ page import="java.util.Date" %>
-                <%= new Date().toString() %>
-                
-                </a> 
+                <a class="navbar-brand" >현재 서버의시간은.. ${now}</a> 
             </div>
             <!-- /.navbar-header -->
 
