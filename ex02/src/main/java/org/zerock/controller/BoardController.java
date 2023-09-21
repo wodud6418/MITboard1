@@ -46,9 +46,14 @@ public class BoardController {
 									   //redirect 가 있으면 요청
 	}
 	
-	@GetMapping({"/register","/remove"})
+	@GetMapping("/register")
 	public void register() {
 		
+	}
+	
+	@GetMapping("/remove") //비번 화면 요청
+	public void remove(Long bno,Model model) {
+		model.addAttribute("bno", bno);
 	}
 
 	@GetMapping("/modify")
@@ -75,16 +80,23 @@ public class BoardController {
 	
 	// 삭제(글번호-bno) board/remove (post)  <- 입력화면(get)
 	@PostMapping("/remove")
-	public String remove(Long bno,RedirectAttributes rttr) {
+	public String remove(Long bno,RedirectAttributes rttr,String pw) {
 		log.info("삭제 url 요청");
-		if(service.remove(bno)) { //이상없으면 result 이름으로 success 라는 문자 전송
-			rttr.addFlashAttribute("oper", "remove");
-			rttr.addFlashAttribute("result", bno); 
-			
+		log.info("입력된 패스워드:"+ pw);
+		if(pw.equals("1234")) { 
+			if(service.remove(bno)) { //이상없으면 result 이름으로 success 라는 문자 전송
+				rttr.addFlashAttribute("oper", "remove");
+				rttr.addFlashAttribute("result", bno); 
+			}
+			return "redirect:/board/list";	
+		}else {
+			rttr.addFlashAttribute("flag", "fail");
+			return "redirect:/board/remove?bno="+bno;
 		}
-		return "redirect:/board/list";	
 	}
 
+			
+	
 	
 	// 수정(수정글-BoardV) board/modify (post) <- 입력화면(get)
 	@PostMapping("/modify")

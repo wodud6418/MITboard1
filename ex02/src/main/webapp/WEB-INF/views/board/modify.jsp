@@ -42,6 +42,7 @@
                                          <button type="button" class="btn btn-danger" data-oper="remove">삭제하기</button>
                                         <button type="button" class="btn btn-primary" data-oper="list">목록보기</button>                               
                                         </div>
+                                        
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
@@ -87,8 +88,10 @@
 					return;
 				}
 			}
-			else if(operation==="remove") //삭제 버튼이 눌리면
+			else if(operation==="remove"){ //삭제 버튼이 눌리면
 				formObj.attr("action","/board/remove");
+				formObj.attr("method","get");
+			}
 			else if(operation==="list"){ //리스트 버튼이 눌리면
 				self.location="/board/list";  //board/list 요청
 				return; //리턴없으면 아래문장이 실행됨으로
